@@ -1,0 +1,764 @@
+/* RESET & GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #202020;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202020;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: #202020;
+    text-decoration: none;
+}
+
+.navbar-user {
+    font-size: 14px;
+    color: #606060;
+}
+
+.logout-btn {
+    font-size: 14px;
+    color: #202020;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #d0d0d0;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: #202020;
+    color: white;
+    border-color: #202020;
+}
+
+body.with-navbar {
+    padding-top: 60px;
+}
+
+
+/* USAGE PAGE */
+body.usage-page {
+    background: #f5f5f5;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.usage-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.usage-title {
+    color: #202020;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.usage-desc {
+    color: #606060;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.usage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+.usage-table th,
+.usage-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.usage-table th {
+    background: #202020;
+    color: white;
+    font-weight: 600;
+}
+
+.usage-table td {
+    color: #404040;
+}
+
+.usage-link {
+    color: #202020;
+    text-decoration: underline;
+}
+
+.usage-link:hover {
+    color: #606060;
+}
+
+.usage-btn {
+    background: #202020;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usage-btn:hover {
+    background: #404040;
+}
+
+.usage-total {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 16px;
+    color: #202020;
+}
+
+
+/* REVENUE PAGE */
+body.revenue-page {
+    background: #f5f5f5;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.revenue-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.revenue-title {
+    color: #202020;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.revenue-subtitle {
+    color: #202020;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #202020;
+    padding-bottom: 8px;
+}
+
+.revenue-form {
+    margin-bottom: 24px;
+}
+
+.revenue-label {
+    font-weight: 500;
+    color: #404040;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.revenue-input {
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    font-size: 14px;
+    margin-right: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.revenue-input:focus {
+    border-color: #606060;
+}
+
+.revenue-btn {
+    background: #202020;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.revenue-btn:hover {
+    background: #404040;
+}
+
+.revenue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+.revenue-table th,
+.revenue-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.revenue-table th {
+    background: #202020;
+    color: white;
+    font-weight: 600;
+}
+
+.revenue-table td {
+    color: #404040;
+}
+
+.revenue-total {
+    font-weight: 600;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #202020;
+}
+
+.revenue-container a.revenue-btn {
+    display: inline-block;
+    margin-top: 24px;
+    text-decoration: none;
+}
+
+.revenue-error {
+    color: #d32f2f;
+    margin-top: 8px;
+    font-size: 13px;
+    padding: 10px;
+    background: #ffebee;
+    border-left: 3px solid #d32f2f;
+}
+
+/* STATISTICS PAGE */
+body.stat-page {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.stat-container {
+    background: white;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.stat-title {
+    color: #202020;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.stat-button {
+    display: block;
+    background: #202020;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.stat-button:hover {
+    background: #404040;
+}
+
+.stat-back-link {
+    display: inline-block;
+    color: #606060;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.stat-back-link:hover {
+    color: #202020;
+}
+
+
+/*MANAGER - CUSTOMER MENU*/
+body.manager-page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.manager-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.manager-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 40px;
+}
+
+.manager-button {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: #202020;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+}
+
+.manager-button:hover {
+    background: #404040;
+}
+
+
+
+/*LOGIN*/
+body.login-page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid #e0e0e0;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-label {
+    font-size: 14px;
+    color: #404040;
+    margin-bottom: 6px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+}
+
+.login-input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-input:focus {
+    border-color: #606060;
+}
+
+.login-btn {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: #202020;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background: #404040;
+}
+
+.login-error {
+    font-size: 13px;
+    color: #d32f2f;
+    margin-top: 16px;
+    padding: 10px;
+    background: #ffebee;
+    border-left: 3px solid #d32f2f;
+}
+
+
+/* INVOICE PAGE */
+body.invoice-page {
+    background: #f5f5f5;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.invoice-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.invoice-title {
+    text-align: center;
+    color: #202020;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.invoice-section-title {
+    color: #202020;
+    border-bottom: 2px solid #202020;
+    padding-bottom: 8px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.invoice-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #404040;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+}
+
+.invoice-table th {
+    background: #202020;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.invoice-table td {
+    color: #404040;
+    font-size: 14px;
+}
+
+.invoice-totals {
+    margin-top: 24px;
+    font-weight: 600;
+    color: #202020;
+    line-height: 2;
+    font-size: 14px;
+}
+
+/* CUSTOMER PAGE */
+body.customer-page {
+    background: #f5f5f5;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.customer-title {
+    color: #202020;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.customer-btn {
+    background: #202020;
+    color: white;
+    padding: 14px 24px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+
+.customer-btn:hover {
+    background: #404040;
+}
+
+.customer-logout {
+    font-size: 14px;
+    color: #202020;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #d0d0d0;
+    transition: all 0.2s;
+}
+
+.customer-logout:hover {
+    background: #202020;
+    color: white;
+    border-color: #202020;
+}
+
+.customer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.customer-subtext {
+    color: #606060;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/*APPOINTMENT*/
+/* APPOINTMENT PAGE */
+body.appointment-page {
+    background: #f5f5f5;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.appointment-box {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.appointment-title {
+    color: #202020;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.appointment-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.appointment-row > div {
+    flex: 1;
+}
+
+.appointment-label {
+    font-size: 14px;
+    color: #404040;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.appointment-row input,
+.appointment-row select {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    background: white;
+    color: #202020;
+    box-sizing: border-box;
+}
+
+.appointment-row input:focus,
+.appointment-row select:focus {
+    border-color: #606060;
+}
+
+.appointment-btn {
+    display: block;
+    width: 100%;
+    background: #202020;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 24px;
+}
+
+.appointment-btn:hover {
+    background: #404040;
+}
+
+.appointment-message {
+    margin-top: 16px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.appointment-error {
+    background: #ffebee;
+    color: #d32f2f;
+    border-left: 3px solid #d32f2f;
+}
+
+.appointment-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-left: 3px solid #2e7d32;
+}
+
+.appointment-back {
+    display: inline-block;
+    margin-top: 16px;
+    text-decoration: underline;
+    color: #606060;
+    font-size: 14px;
+}
+
+.appointment-back:hover {
+    color: #202020;
+}
+
+/* SUPPLIER DETAIL PAGE */
+.supplier-info {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.supplier-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #202020;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-table td:first-child {
+    width: 200px;
+    color: #606060;
+}
+
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: #606060;
+    font-size: 14px;
+}
+
+.button-group {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #202020;
+    color: white;
+    padding: 10px 24px;
+    text-decoration: none;
+    border: 1px solid #202020;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+    background: #404040;
+    border-color: #404040;
+}
+
+.total-row {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+.total-row td {
+    padding: 12px !important;
+    border-top: 2px solid #202020;
+}
+
